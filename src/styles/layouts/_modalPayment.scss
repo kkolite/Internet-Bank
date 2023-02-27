@@ -1,0 +1,227 @@
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000080;
+  height: 100vh;
+
+  &__content {
+    width: 80%;
+    max-width: 570px;
+    margin: 0 auto;
+    background-color: $white;
+    padding: 20px;
+    border-radius: 5px;
+
+    @include media-mobile {
+      width: 94%;
+      padding: 10px;
+    }
+
+    &.loading {
+      max-height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.popup-message {
+  z-index: 15;
+
+  &__content {
+    width: 60%;
+    margin: 0 auto;
+    max-width: 300px;
+    background-color: $third;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  &__message-info {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.commis {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  &__person-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 20px 0;
+
+    @include media-mobile {
+      margin: 0;
+    }
+  }
+
+  &__email {
+    font-size: 18px;
+    margin-bottom: 5px;
+
+    @include media-mobile {
+      font-size: 16px;
+    }
+
+    &-label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid $third;
+        border-radius: .25em;
+        margin-right: 0.6em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        transition: all .3s;
+      }
+    }
+
+    &-input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+  
+      &:not(:disabled):not(:checked)+label:hover::before {
+        border-color: transparentize($color: $third, $amount: 0.5);
+      }
+  
+      &:not(:disabled):active+label::before {
+        background-color: transparentize($color: $third, $amount: 0.5);
+        border-color: transparentize($color: $third, $amount: 0.5);
+      }
+  
+      &:focus+label::before {
+        box-shadow: 0 0 0 0.2rem transparentize($color: $third, $amount: 0.5);
+      }
+  
+      &:focus:not(:checked)+label::before {
+        border-color: transparentize($color: $third, $amount: 0.5);
+      }
+  
+      &:checked+label::before {
+        border-color: $third;
+        background-color: $third;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+
+      &:disabled+label::before {
+        background-color: $color-btn-unable;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+
+  &__item {
+    margin: 0 0 10px 0;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  &__card-details {
+    margin: 0 0 20px 0;
+  }
+
+  &__btn {
+    text-align: center;
+  }
+}
+
+.card-data {
+  max-width: 320px;
+  margin: 0 auto;
+  background-color: $third;
+  border-radius: 5px;
+  padding: 25px 15px;
+
+  input {
+    text-align: center;
+  }
+
+  &__card-number {
+    display: flex;
+    gap: 8px;
+    margin: 0 0 20px 0;
+  }
+
+  &__card-number img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info input {
+    width: 70px;
+  }
+
+  &__valid-data {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+  }
+}
+
+.btn--col-3.btn-colored {
+  font-weight: 700;
+  max-width: 245px;
+  
+  &.unable {
+    background-color: $color-btn-unable;
+    cursor: default;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.input--payment {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  max-width: 400px;
+  border-radius: 8px;
+
+  &:disabled {
+    border-color: #00000080;
+  }
+
+  @include media-mobile {
+    font-size: 16px;
+  }
+}

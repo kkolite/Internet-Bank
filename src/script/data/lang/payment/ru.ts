@@ -1,0 +1,31 @@
+import { COMMISSION_AMOUNT, COMMISSION_EXCHANGE_AMOUNT } from '../../constants';
+
+export default {
+  'serv-card__category-text': 'Категория:',
+  filter__title: 'Выберите категорию:',
+  'serv-card__btn': 'оплатить',
+  'operation__category-text': 'Категория:',
+  'form-paym__btn': 'оплатить со своего счета',
+  'form-paym__btn-card': 'оплатить картой',
+  operation__commission: `Комиссия за данную операцию составляет ${COMMISSION_AMOUNT}% от платежа`,
+  'operation__commission-exch': `Комиссия за данную операцию составляет ${COMMISSION_EXCHANGE_AMOUNT}% от платежа`,
+  back__text: 'Вернуться ко всем сервисам',
+  'option-default-anonim': 'Валюта для списания',
+  'option-default-2_0': 'Счет для списания',
+  'option-default-2_1': 'Счет для пополнения',
+  option_USD: 'Мой счет в USD',
+  option_EUR: 'Мой счет в EUR',
+  option_GBP: 'Мой счет в GBP',
+  option_BYN: 'Мой счет в BYN',
+  option_UAH: 'Мой счет в UAH',
+  'option-anonim_USD': 'Карта в USD',
+  'option-anonim_EUR': 'Карта в EUR',
+  'option-anonim_GBP': 'Карта в GBP',
+  'option-anonim_BYN': 'Карта в BYN',
+  'option-anonim_UAH': 'Карта в UAH',
+  'radio-all': 'Все',
+
+  'th-curr-from': 'Продажа',
+  'th-curr-to': 'Покупка',
+  'th-rate': 'Курс',
+};

@@ -1,0 +1,113 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+
+  &__name,
+  &__link {
+    font-size: 20px;
+    height: 30px;
+    padding: 5px;
+  }
+
+  &__select {
+    font-size: 20px;
+    height: 30px;
+  }
+
+  &__button,
+  &__create {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    border-width: 0px;
+    font-size: 20px;
+    color: $white;
+    background-color: $third;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+      opacity: .8;
+    }
+  }
+
+  &__info {
+    gap: 8px;
+    width: 300px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  &__info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 8px 0;
+  }
+
+  &__range-item {
+    display: flex;
+    gap: 2px;
+    justify-content: space-between;
+  }
+
+  &__instraction {
+    margin-left: 10px;
+    margin-top: 25px;
+  }
+
+  &__brightness,
+  &__blur {
+    width: 140px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-webkit-slider-runnable-track {
+      height: 2px;
+      background-color: $third;
+    }
+
+    &::-webkit-slider-thumb {
+      background: $third;
+      border-radius: 4px;
+      cursor: pointer;
+      width:15px;
+      height: 8px;
+      margin-top: -3px;
+      -webkit-appearance: none;
+    }
+  }
+
+  &__prev {
+    zoom: 80%;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 999px) {
+  .card{
+    &__prev {
+      zoom: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .card{
+    flex-direction: column;
+    &__prev {
+      margin: 20px 0;
+      zoom: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card{
+    &__prev {
+      zoom: 45%;
+    }
+  }
+}

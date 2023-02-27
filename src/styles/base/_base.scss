@@ -1,0 +1,25 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn-colored {
+  width: 90%;
+  height: 30px;
+  border-radius: 15px;
+  border-width: 0px;
+  font-size: 20px;
+  color: $white;
+  background-color: $third;
+  cursor: pointer;
+  transition: .2s;
+
+  &:hover{
+    opacity: .8;
+  }
+}

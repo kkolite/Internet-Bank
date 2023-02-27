@@ -1,0 +1,337 @@
+.account-container {
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.account__main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.account__main-item {
+  width: 48%;
+}
+
+.account__description {
+  text-align: center;
+}
+
+.account__list {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+  list-style: none;
+  font-size: 24px;
+}
+
+.account__list-item,
+.account__currency_operations-create,
+.account__currency_operations-delete {
+  cursor: pointer;
+}
+
+.account__list-item_active {
+  color: $third;
+}
+
+#account__edit,
+#account__email {
+  padding-bottom: 15px;
+  border-bottom: 2px $third solid;
+  margin-bottom: 40px;
+}
+
+#account__password,
+#account__edit,
+#account__email {
+  width: 360px;
+  text-align: right;
+}
+
+#account__edit,
+#account__email {
+  margin-bottom: 15px;
+}
+
+.account__edit_title,
+.account__password_title,
+.account__email_title {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+#account__edit_username,
+#account__edit_email,
+#account__password_oldpassword,
+#account__password_newpassword {
+  margin-bottom: 10px;
+}
+
+#account__edit_password,
+#account__email_password,
+#account__password_confirmpassword,
+.account__clarify_question,
+.account__remove {
+  margin-bottom: 20px;
+}
+
+.account__edit_username-input,
+.account__edit_email-input,
+.account__edit_password-input,
+.account__email_password-input,
+.account__password_oldpassword-input,
+.account__password_newpassword-input,
+.account__password_confirmpassword-input,
+#account__currency_create-select,
+#account__currency_delete-select,
+#remove-password {
+  width: 190px;
+  height: 25px;
+  border-radius: 6px;
+  border: 1px #d8c307 solid;
+}
+
+.account__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-submit,
+.button-cancel,
+.lastfive-cancel,
+.account__currency-button {
+  width: 43%;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 18px;
+  border-width: 0px;
+  color: #fffffc;
+  background-color: #d8c307;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.account__remove_button-submit,
+.account__remove_button-cancel {
+  width: 80px;
+} 
+
+.account__currency_title {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.account__currency_operations {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 25px;
+}
+
+.account__currency_current {
+  margin-top: 18px;
+  padding-top: 12px;
+  max-width: 350px;
+  min-height: 100px;
+  border-top: 2px $third solid;
+}
+
+.account__currency_current-h {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.create-currency,
+.delete-currency {
+  display: inline-block;
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+  border: #d8c307 solid 1px;
+  border-radius: 50%;
+}
+
+.create-currency-active,
+.delete-currency-active {
+  background: #d8c307;
+}
+
+#account__currency_create-container,
+#account__currency_delete-container {
+  margin-bottom: 20px;
+}
+
+.account__currency-button {
+  margin-top: 10px;
+}
+
+th,
+td {
+  width: 120px;
+  text-align: center;
+  border-bottom: 1px dashed black;
+  border-right: 1px dashed black;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.table-dark {
+  border-bottom: 1px dashed $white;
+  border-right: 1px dashed $white;
+}
+
+th:last-child,
+td:last-child,
+th.table-dark:last-child,
+td.table-dark:last-child {
+  border-right: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+.account__notification,
+.account__notification_email,
+.account__notification_password {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 90%;
+}
+
+.account__operations_table {
+  margin-bottom: 20px;
+  border: 2px $third solid;
+  min-height: 170px;
+}
+
+.account__ttl {
+  margin: 20px;
+}
+
+.account__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 15px;
+}
+
+.account__cards_card {
+  display: block;
+  border-radius: 6px;
+  width: 170px;
+  height: 110px;
+}
+
+.account__operations_button,
+.account__alloperations_button {
+  width: 130px;
+  height: 30px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  font-size: 18px;
+  border-width: 0px;
+  color: #fffffc;
+  background-color: grey;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.account__operations_button-active,
+.account__alloperations_button {
+  background-color: #d8c307;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.account__operations_container {
+  border-bottom: #d8c307 1px solid;
+  margin-bottom: 20px;
+}
+
+.account__op_title,
+.account__ops_title {
+  margin-bottom: 15px;
+}
+
+.account__operation_process,
+.account__operations_process {
+  height: 22px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1100px) {
+  .account__main-container {
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .account__main-item {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+@media (max-width: 980px) {
+  .account__list {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .account__list {
+    flex-wrap: wrap;
+    height: 70px;
+  }
+
+  .account__list-item {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .account-container {
+    font-size: 14px;
+  }
+  .account__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 410px) {
+  .account-container {
+    padding: 0 5px;
+  }
+
+  .account__operations_table {
+    font-size: 13px;
+  }
+
+  #account__password,
+  #account__edit,
+  #account__email {
+    width: 310px;
+    font-size: 13px;
+}
+}

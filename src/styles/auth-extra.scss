@@ -1,0 +1,76 @@
+.login{
+  &__button-anonim {
+    font-size: 16px;
+    border: 2px $third solid;
+    background-color: $white;
+    color: $third;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  &__register,
+  &__reset {
+    transition: .2s;
+    cursor: pointer;
+    &:hover {
+      color: $third
+    }
+  }
+}
+
+.reg {
+  &__button {
+    &-container {
+      flex-direction: row;
+      width: 80%;
+    }
+
+    &-reg,
+    &-back {
+      width: 45%;
+    }
+
+    &-back {
+      font-size: 16px;
+      border: 2px $third solid;
+      background-color: $white;
+      color: $third;
+    }
+  }
+}
+
+.reset {
+  &__button-back {
+    font-size: 16px;
+    border: 2px $third solid;
+    background-color: $white;
+    color: $third;
+  }
+}
+
+.verify {
+  &__container {
+    justify-content: flex-start;
+  }
+  &__button {
+    &-container {
+      flex-direction: row;
+      width: 80%;
+    }
+    &-confirm,
+    &-back {
+      width: 45%;
+    }
+
+    &-back {
+      color: $third;
+      background-color: $white;
+      border: 1px $third solid;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+.stocks {
+  &__container {
+    font-size: 16px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px
+  }
+
+  &__user,
+  &__market {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__user-header {
+    display: flex;
+    justify-content: space-between;
+    width: 46%;
+  }
+
+  &__market-header {
+    display: flex;
+    justify-content: space-between;
+    width: 49%;
+  }
+
+  &__market {
+    min-width: 430px;
+    width: 52%;
+  }
+
+  &__user {
+    min-width: 320px;
+    width: 45%;
+  }
+
+  &__user-item,
+  &__market-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px $third solid;
+    border-radius: 5px;
+  }
+
+  &__market-name,
+  &__user-name,
+  &__user-header-name 
+  &__market-header-name {
+    width: 73px;
+    text-align: left;
+  }
+
+  &__market-price {
+    width: 50px;
+    text-align: left;
+  }
+
+  &__market-payment,
+  &__user-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+  }
+
+  &__market-button,
+  &__user-button {
+    width: 80px;
+    height: 22px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: $third;
+    color: $white;
+    cursor: pointer;
+    transition: .2s;
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__market-status,
+  &__user-status {
+    text-align: center;
+  }
+
+}
+
+.item__minus,
+.item__plus {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: $third;
+  color: $white;
+  cursor: pointer;
+  transition: .2s;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.item__value {
+  text-align: center;
+  width: 40px;
+}
+
+@media screen and (max-width: 1020px) {
+  .stocks {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__user,
+    &__market {
+      width: 90%;
+      min-width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .stocks {
+    &__container {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    &__user,
+    &__market {
+      width: 100%;
+    }
+
+    &__market-header,
+    &__user-header {
+      width: 52%;
+    }
+
+    &__market-name,
+    &__user-name {
+      width: 70px;
+    }
+
+    &__user-controls,
+    &__market-controls {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 3px;
+    }
+
+    &__market-item {
+      padding: 3px;
+    }
+
+    &__market-payment,
+    &__user-payment {
+      width: 85px;
+    }
+  }
+}

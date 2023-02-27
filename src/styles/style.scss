@@ -1,0 +1,45 @@
+$white: #fffffc;
+$black: #090909;
+$third: #d8c307;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  transition: opacity .2s;
+}
+
+@import './abstract/constants';
+@import './abstract/mixins';
+@import 'auth';
+@import 'auth-extra';
+@import 'load';
+@import 'main';
+@import 'header';
+@import 'about';
+@import 'stat';
+@import 'account';
+@import 'admin';
+@import 'card';
+@import 'stock';
+@import 'footer';
+@import './base/base';
+@import './layouts/payments';
+@import './layouts/paymentsDetails';
+@import './layouts/modalPayment';
+@import './dark.scss';
+@import './quiz.scss';
+
+.invalid {
+  border: 2px red solid
+}
+
+.button__disabled {
+  background-color: rgb(169, 169, 169);
+}
